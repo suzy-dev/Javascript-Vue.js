@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Vue</title>
+    <script src="vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        Mensagem: {{menssagem}} <br>
+        Empresas: {{empresa}} <br>
+        Cargos: {{cargos[0]}} <br>
+        Perfil: {{perfil}} <br>
+        ativo: {{ativo}} <br>
+        Cursos: {{cursos[1]}} <br> 
+        Lula: {{qtd}}
+
+    </div>
+
+   <script>
+const vueModel = new Vue({
+	el:"#app",
+    data:{
+        menssagem : "Informações Aleatórias",
+        qtd: 13,
+        ativo: true,
+        empresa: ["Space","ToMobile","Burguer King"],
+        cargos : ["developer", "suporte, RH", "Inteligent Busines"],
+            perfil: {
+                nome: "suzana",
+                idade: 19,
+    	}, 
+                cursos:[{nome:"Javascript: POO", horas: 40},
+                        {nome:"Jva: DKD", horas:25}],
+    }
+})
+
+   </script>
+    
+</body>
+</html>
