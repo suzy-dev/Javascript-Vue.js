@@ -24,13 +24,13 @@
             el:'.app',
             data: {},
             methods:{
-                somar: function somar(val1, val2){
+                somar: function somar(val1, val2){ //sintaxe convencional 
                     return val1+val2;
                 },
-                subtrair: function subtrair(){
+                subtrair: function (){  //sintaxe de function anonima
                     return 9 - 5;
                 },
-                fatorial: function fatorial(numb){
+                fatorial:(numb)=>{   //sintaxe de arrow function
                     let result = numb;
                     if(numb===0 || numb===1){
                         return 1;
@@ -41,7 +41,7 @@
                     }
                 return result;
                 },
-                exibeMsg: function exibeMsg(){
+                exibeMsg(){    //sintaxe elegante de definir chave-valor
                     return "Math Methods";
                 }
             }
