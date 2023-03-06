@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods Vue</title>
+    <link href="style-geral.css" rel="stylesheet">
+    <script src="vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+<body>
+
+    <div class="app">
+       4 + 8 = {{somar(4,8)}}<br>
+       9 - 5 = {{subtrair()}} <br>
+        6!= {{fatorial(6)}} <br>
+        Mensagem: {{exibeMsg()}}
+    </div>
+
+    <script>
+        
+        const vueModel = new Vue({
+            el:'.app',
+            data: {},
+            methods:{
+                somar: function somar(val1, val2){
+                    return val1+val2;
+                },
+                subtrair: function subtrair(){
+                    return 9 - 5;
+                },
+                fatorial: function fatorial(numb){
+                    let result = numb;
+                    if(numb===0 || numb===1){
+                        return 1;
+                    }
+                    while(numb>1){
+                        numb--;
+                        result*= numb
+                    }
+                return result;
+                },
+                exibeMsg: function exibeMsg(){
+                    return "Math Methods";
+                }
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
