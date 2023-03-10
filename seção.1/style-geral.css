@@ -2,3 +2,22 @@ body{
     background-color: black;
     color:gold;
 }
+.cor{
+    color:greenyellow;
+}
+.botao{
+    width: 6.2rem;
+    height: 100px;
+    background-color: blue;
+    color: aliceblue;
+}
+.enviar{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 6.7rem;
+    padding: 0px;
+}
+.checkbox{
+    width: 6.7rem;
+
+
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretiva v-on</title>
+    <script src="vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="style-geral.css">
+</head>
+<body>
+
+    <div class="app">
+        <p:class="alert">{{exibeAlerta()}}</p>
+        <a>
+            site:
+        </a>
+    </div>
+
+    <script>
+           const vueModel = new Vue ({
+            el:".app",
+            data:{
+                element:"alert"
+            },
+            methods:{
+                exibeAlerta(){
+                    alert("VIRUS CAVALO DE TROIA")
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>
