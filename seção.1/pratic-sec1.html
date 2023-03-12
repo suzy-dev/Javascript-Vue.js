@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 1</title>
+    <script src="vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link href="pratica-styles.css" rel="stylesheet">
+</head>
+<body>
+    <p>#Botando em prática rsrs</p>
+    <p>Usando v-on, v-bind, parametros tirados do style</p>
+    <div class="app">  oioi
+        <div class="borda principalzinha" :class='color'>
+
+            cor: {{color}}
+            posição X: 
+            posição Y: 
+
+        </div>
+        <hr> <!-- linha horizontal-->
+        <div @click="changColor('amarelo')" @mouseover="changColor('vermelho')"  @mousemove="position($event)" class="borda normal"></div>
+        <div @click="changColor('verdinha')" @mouseover="changColor('azul')" class="borda normal"></div>
+        <div @click="changColor('orange')" @mouseover="changColor('brown')" class="borda normal"></div>
+    </div>
+
+    <script>
+        const vueModel = new Vue({
+            el:'.app',
+            data:{
+                color:'branco'
+            },
+            methods: {
+                changColor(cor){
+                    this.color = cor;
+                },
+                position(event){
+                    console.log(event)
+                }
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
