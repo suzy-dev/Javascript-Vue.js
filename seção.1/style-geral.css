@@ -1,6 +1,8 @@
 body{
     background-color: black;
     color:gold;
+    font-weight: bold;
+    font-size: 25px;
 }
 .cor{
     color:greenyellow;

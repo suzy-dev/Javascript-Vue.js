@@ -1,0 +1,45 @@
+body{
+    background-color:gray;
+}
+
+p{
+    color:gold;
+}
+
+.principalzinha{
+    width: 480px;
+    height: 400px;
+}
+
+.normal{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+.borda{
+    border:5px solid black;
+}
+
+.branco{
+    background-color: white;
+}
+.verdinha{
+    background-color: green;
+}
+.orange{
+    background-color: orange;
+}
+.amarelo{
+    background-color: yellow;
+}
+.azul{
+    background-color: blue;
+}
+.vermelho{
+    background-color: red;
+}
+.brown{
+    background-color: brown;
+}
+
