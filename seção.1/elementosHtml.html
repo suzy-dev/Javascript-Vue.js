@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos HTML</title>
+    <script src="vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link href="style-geral.css" rel="stylesheet">
+</head>
+<body>
+    <h2 style="color: white;"> #Pegando atributos do html </h2>
+   
+    <div class="app"> <!--elemento pai-->
+
+     <select style="color:green; width: 100px;height: 30px; " id="opcoes">selecione
+        <option value="um">um 1</option>
+        <option value="dois">dois 2</option>
+        <option value="tres">tres 3</option>
+        <option value="tudasOpt">122333</option>
+     </select> <br>
+
+     <input id="inpute"> <br>
+     <button @Click="dadosHtml" @keyup.enter="dadosHtml">executar</button>
+
+    </div>
+
+    <script>
+
+        const vueModel = new Vue({
+            el:'.app',
+            data:{},
+            methods:{
+                    dadosHtml: function(){
+                        console.log(inpute.value)
+                    }
+                }
+        })
+
+    </script>
+
+</body>
+</html>
