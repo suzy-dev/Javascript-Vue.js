@@ -10,38 +10,46 @@
     <link href="pratica-styles.css" rel="stylesheet">
 </head>
 <body>
+    
     <p>#Botando em prática rsrs</p>
     <p>Usando v-on, v-bind, parametros tirados do style</p>
     <div class="app">  oioi
+
         <div class="borda principalzinha" :class='color'>
 
             cor: {{color}}
-            posição X: 
-            posição Y: 
+            posição X: {{x}}
+            posição Y: {{y}}
 
         </div>
         <hr> <!-- linha horizontal-->
-        <div @click="changColor('amarelo')" @mouseover="changColor('vermelho')"  @mousemove="position($event)" class="borda normal"></div>
-        <div @click="changColor('verdinha')" @mouseover="changColor('azul')" class="borda normal"></div>
-        <div @click="changColor('orange')" @mouseover="changColor('brown')" class="borda normal"></div>
+        <div @click="changColor('amarelo')" @mouseover="changColor('vermelho')" @mousemove="coordenadas('x','y',$event)" class="borda normal"></div>
+        <div @click="changColor('verdinha')" @mouseover="changColor('azul')" @mousemove="coordenadas('x','y',$event)" class="borda normal"></div>
+        <div @click="changColor('orange')" @mouseover="changColor('brown')" @mousemove="coordenadas('x','y',$event)" class="borda normal"></div>
+
     </div>
 
     <script>
+
         const vueModel = new Vue({
             el:'.app',
             data:{
-                color:'branco'
+                color:'branco',
+                x:'',
+                y:'',
             },
             methods: {
                 changColor(cor){
                     this.color = cor;
                 },
-                position(event){
-                    console.log(event)
+                coordenadas(x, y , event){
+                    this.x = event.x
+                    this.y = event.y
+                    console.log(`Coordenadas --> X: ${event.x}, Y: ${event.y}`)
                 }
             }
         })
-
+            //eventos gerais, coordenadas, afins
     </script>
     
 </body>
