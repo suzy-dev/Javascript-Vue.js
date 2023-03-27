@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços de Repetição 2</title>
+    <script src="vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link href="style-geral.css" rel="stylesheet">
+</head>
+<body>
+
+   
+    <div class="app">
+    <table border="2">
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+        </thead>
+
+        <tbody>
+            <tr v-for="politic, key in politica">
+                <td>{{key}}</td>
+                <td>{{politic.nome}}</td>
+                <td>{{politic.descricao}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <script>
+
+        const vueModel = new Vue({
+            el:'.app',
+            data:{
+            politica:{
+                13:{
+                    nome:'Lula',
+                    descricao:'Corrupto'
+                },
+                22:{
+                    nome:'Salnorabo',
+                    descricao:'Corrupto também'
+                }
+            }},
+            methods:{
+              
+                }
+        })
+
+    </script>
+
+</body>
+</html>
