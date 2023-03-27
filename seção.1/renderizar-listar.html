@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Key</title>
+    <script src="vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link href="style-geral.css" rel="stylesheet">
+</head>
+<body>
+    <p>
+        Atributo de key é como uma identidade para o elemento hmtl, key -> id.
+    </p>
+<hr>
+    <div class="app">
+        <ul>
+            <li v-for="repet in repetidor" v-bind:key="repet.id">
+                <div>
+                {{ repet.id }}
+                <input type="text">
+            </div>
+            </li>
+        </ul>
+        <button @click="ramdom()">misturar</button>
+    </div>
+
+    <script>
+
+        const vueModel = new Vue({
+            el:'.app',
+            data:{
+                repetidor:[
+                    { id:1, repetir:'number 1' },
+                    { id:2, repetir:'number 2' },
+                    { id:3, repetir:'number 3' }
+                ]
+            },
+            methods:{
+                ramdom(){
+                    let aleatorio = []
+                    aleatorio[0] = this.repetidor[2]
+                    aleatorio[1] = this.repetidor[0]
+                    aleatorio[2] = this.repetidor[1]
+
+                    this.repetidor = aleatorio
+                }
+            }
+        })
+
+    </script>
+
+</body>
+</html>
