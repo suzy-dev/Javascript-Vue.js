@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diretiva v-hmtl</title>
+    <title>Laços de Repetição</title>
     <script src="vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
     <link href="style-geral.css" rel="stylesheet">
@@ -13,7 +13,9 @@
 
    
     <div class="app">
-        <div><p v-html="elementHTML"></p></div>
+        <ul>
+            <li v-for="(array, key) in arrayUDF">{{key}} {{array}}</li>
+        </ul>
     </div>
 
     <script>
@@ -21,13 +23,15 @@
         const vueModel = new Vue({
             el:'.app',
             data:{
-                elementHTML: '<a href="https://2mobile.com.br">2MOBILE</a>',
+                arrayUDF: ['suzana','bruna','gustavo','joao','daniel'],
+                key:1
             },
             methods:{
               
                 }
         })
-
+//criei duas variaveis na diretiva v-for: array e key
+//interliguei o array com arrayUDF, mas o key não declarei no data, queria colocar valor=1, não consegui
     </script>
 
 </body>
